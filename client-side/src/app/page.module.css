@@ -1,0 +1,18 @@
+.main_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #1475cf;
+  height: 300px;
+  width: 500px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main_content {
+    min-height: 60px;
+    min-width: 260px;
+  }
+}
