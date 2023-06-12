@@ -19,7 +19,7 @@ export class Society extends BaseEntity {
 
   @OneToOne(() => User, (user) => user.society)
   @JoinColumn({ name: "user_id" })
-  ceo?: User;
+  ceo!: User;
 
   @Column({ nullable: false, length: 16, type: "varchar" })
   password!: string;
@@ -63,8 +63,8 @@ export class Society extends BaseEntity {
 
   @OneToOne(() => Currency, (currency) => currency.society)
   @JoinColumn({ name: "accounting_currency" })
-  currency?: Currency;
+  currency!: Currency;
 
   @OneToMany(() => Journal, (journal) => journal.society)
-  journals?: Journal[];
+  journals: Journal[] = [];
 }

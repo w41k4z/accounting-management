@@ -26,5 +26,5 @@ export class ReferenceDocument extends BaseEntity {
   meaning!: string;
 
   @OneToMany(() => Journal, (journal) => journal.reference)
-  journals?: Journal[];
+  journals: Journal[] = [];
 }

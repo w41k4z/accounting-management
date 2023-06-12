@@ -26,5 +26,5 @@ export class JournalCode extends BaseEntity {
   entitled!: string;
 
   @OneToMany(() => Journal, (journal) => journal.code)
-  journals?: Journal[];
+  journals: Journal[] = [];
 }

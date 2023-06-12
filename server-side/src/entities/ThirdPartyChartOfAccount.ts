@@ -29,5 +29,5 @@ export class ThirdPartyChartOfAccount extends BaseEntity {
   entitled!: string;
 
   @OneToMany(() => JournalDetail, (journalDetail) => journalDetail.journal)
-  journalDetails?: JournalDetail[];
+  journalDetails: JournalDetail[] = [];
 }
